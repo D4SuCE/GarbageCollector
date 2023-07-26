@@ -108,7 +108,7 @@ void gc(vm* vm)
 	markAll(vm);
 	marksweep(vm);
 	vm->maxObjects = vm->numObjects * 2;
-	std::cout << "Óäàëåíî " << numObjects - vm->numObjects << " îáúåêòîâ, " << vm->numObjects << " îñòàëîñü." << std::endl;
+	std::cout << "Ð£Ð´Ð°Ð»ÐµÐ½Ð¾ " << numObjects - vm->numObjects << " Ð¾Ð±ÑŠÐµÐºÑ‚Ð¾Ð², " << vm->numObjects << " Ð¾ÑÑ‚Ð°Ð»Ð¾ÑÑŒ." << std::endl;
 }
 
 Object* newObject(vm* vm, oType type)
@@ -173,7 +173,7 @@ void printObj(Object* object)
 
 void first_test()
 {
-	std::cout << "1: Îáúåêòû íà ñòåêå ñîõðàíåíû." << std::endl;
+	std::cout << "1: ÐžÐ±ÑŠÐµÐºÑ‚Ñ‹ Ð½Ð° ÑÑ‚ÐµÐºÐµ ÑÐ¾Ñ…Ñ€Ð°Ð½ÐµÐ½Ñ‹." << std::endl;
 	vm* vm = newVM();
 	pushInt(vm, 1);
 	pushInt(vm, 2);
@@ -184,7 +184,7 @@ void first_test()
 
 void second_test()
 {
-	std::cout << "2: Íåäîñÿãàåìûå îáúåêòû óäàëåíû." << std::endl;
+	std::cout << "2: ÐÐµÐ´Ð¾ÑÑÐ³Ð°ÐµÐ¼Ñ‹Ðµ Ð¾Ð±ÑŠÐµÐºÑ‚Ñ‹ ÑƒÐ´Ð°Ð»ÐµÐ½Ñ‹." << std::endl;
 	vm* vm = newVM();
 	pushInt(vm, 1);
 	pushInt(vm, 2);
@@ -197,7 +197,7 @@ void second_test()
 
 void third_test()
 {
-	std::cout << "3: Äîòÿíóòüñÿ äî âëîæåííûõ îáúåêòîâ." << std::endl;
+	std::cout << "3: Ð”Ð¾Ñ‚ÑÐ½ÑƒÑ‚ÑŒÑÑ Ð´Ð¾ Ð²Ð»Ð¾Ð¶ÐµÐ½Ð½Ñ‹Ñ… Ð¾Ð±ÑŠÐµÐºÑ‚Ð¾Ð²." << std::endl;
 	vm* vm = newVM();
 	pushInt(vm, 1);
 	pushInt(vm, 2);
@@ -212,7 +212,7 @@ void third_test()
 }
 
 void another_test() {
-	std::cout << "4: Öèêëû." << std::endl;
+	std::cout << "4: Ð¦Ð¸ÐºÐ»Ñ‹." << std::endl;
 	vm* vm = newVM();
 	pushInt(vm, 1);
 	pushInt(vm, 2);
@@ -229,7 +229,7 @@ void another_test() {
 }
 
 void performance() {
-	std::cout << "Ïðîèçâîäèòåëüíîñòü GC." << std::endl;
+	std::cout << "ÐŸÑ€Ð¾Ð¸Ð·Ð²Ð¾Ð´Ð¸Ñ‚ÐµÐ»ÑŒÐ½Ð¾ÑÑ‚ÑŒ GC." << std::endl;
 	vm* vm = newVM();
 
 	for (int i = 0; i < 1000; i++) {
